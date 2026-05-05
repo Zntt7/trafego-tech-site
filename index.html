@@ -657,6 +657,7 @@ p { margin: 0; }
   position: relative;
   display: flex;
   justify-content: flex-start;
+  overflow: hidden;
 }
 .phone {
   width: 320px;
@@ -811,7 +812,7 @@ p { margin: 0; }
 }
 .floater .lbl { font-size: 0.7rem; color: var(--ink-400); }
 .floater .val { font-weight: 600; color: var(--ink-900); }
-.floater.f1 { top: 16%; left: -32px; animation-delay: 0s; }
+.floater.f1 { top: 16%; left: 0; animation-delay: 0s; }
 .floater.f2 { bottom: 22%; right: 4px; animation-delay: 1.5s; }
 .floater.f3 { bottom: -8px; left: 8%; animation-delay: 2.6s; }
 @keyframes float {
@@ -3167,7 +3168,7 @@ function Footer() {
           </div>
         </div>
         <div className="foot-bottom">
-          <span>© 2026 Tráfego Tech </span>
+          <span>© 2026 Tráfego Tech · CNPJ 66.595.426/0001-43</span>
           <span>Foz do Iguaçu · PR · Brasil</span>
         </div>
       </div>
