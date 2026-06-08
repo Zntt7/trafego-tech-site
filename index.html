@@ -2745,11 +2745,11 @@ function NavBar({ tweaks }) {
 
 // Rotating "moment" word — the cinematic heart of the hero
 const MOMENTS = [
-{ word: "almoço", time: "12:34", day: "Quarta" },
-{ word: "domingo", time: "22:47", day: "Domingo" },
-{ word: "feriado", time: "08:12", day: "Sex 25/12" },
-{ word: "fim de turno", time: "19:58", day: "Sexta" },
-{ word: "madrugada", time: "03:14", day: "Sábado" }];
+{ word: "almoço", prefix: "no", time: "12:34", day: "Quarta" },
+{ word: "domingo", prefix: "no", time: "22:47", day: "Domingo" },
+{ word: "feriado", prefix: "no", time: "08:12", day: "Sex 25/12" },
+{ word: "fim de turno", prefix: "no", time: "19:58", day: "Sexta" },
+{ word: "madrugada", prefix: "na", time: "03:14", day: "Sábado" }];
 
 
 function useRotator(items, intervalMs = 2400) {
@@ -2787,7 +2787,7 @@ function Hero({ tweaks }) {
             <span className="line">Seu concorrente</span>
             <span className="line">tá vendendo</span>
             <span className="line line-flip">
-              <span className="flip-prefix">no </span>
+              <span className="flip-prefix">{moment.prefix} </span>
               <span className="flip-window">
                 {MOMENTS.map((m, i) =>
                 <span
