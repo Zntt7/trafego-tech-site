@@ -1700,6 +1700,128 @@ p { margin: 0; }
   100% { transform: scale(1.4); opacity: 0; }
 }
 
+/* ============================================================
+   MOBILE GLOBAL — Otimização completa para telas pequenas
+   ============================================================ */
+
+/* Garante que nada ultrapasse a largura do viewport */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+section, header, footer, nav, main {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  /* Container com padding menor */
+  .container, .container-narrow {
+    padding: 0 16px;
+  }
+
+  /* Hero: fonte menor para caber no mobile */
+  .hero-headline {
+    font-size: clamp(1.9rem, 7.5vw, 2.6rem) !important;
+  }
+
+  /* Esconde floaters decorativos — causam overflow no mobile */
+  .floater { display: none !important; }
+
+  /* Hero visual não transborda */
+  .hero-visual {
+    overflow: hidden;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  /* Phone centralizado e com tamanho máximo seguro */
+  .phone {
+    width: min(290px, calc(100vw - 32px));
+    margin: 0 auto;
+  }
+
+  /* Hero proof cabe na tela */
+  .hero-proof {
+    max-width: 100%;
+  }
+
+  /* Hero actions wrap corretamente */
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* CTA box: padding menor */
+  .cta-box {
+    padding: 28px 20px;
+    border-radius: 18px;
+  }
+
+  /* CTA card: garante que não transborda */
+  .cta-card {
+    padding: 20px;
+  }
+  .cta-card .row strong {
+    font-size: 0.88rem;
+  }
+
+  /* Seção de serviços */
+  .svc { padding: 20px; }
+
+  /* Demo */
+  .demo-side { padding: 20px; }
+
+  /* Pricing */
+  .plan { padding: 24px 20px; }
+
+  /* Footer */
+  .foot-cols { flex-direction: column; gap: 28px; }
+  .foot-bottom {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+
+  /* Títulos das seções */
+  .section-title {
+    font-size: clamp(1.6rem, 5.5vw, 2.4rem);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Container ainda menor em telas muito pequenas */
+  .container, .container-narrow {
+    padding: 0 14px;
+  }
+
+  /* Nav: botão "Falar agora" menor */
+  .nav-inner .btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  /* Hero: fonte ainda menor */
+  .hero-headline {
+    font-size: clamp(1.7rem, 7vw, 2rem) !important;
+  }
+
+  /* Botões hero ocupam largura total */
+  .btn-lg {
+    padding: 14px 18px;
+    font-size: 0.95rem;
+  }
+
+  /* Proof stats num menor */
+  .hero-proof .proof-num {
+    font-size: 1.6rem;
+  }
+}
+
 </style>
 </head>
 <body>
